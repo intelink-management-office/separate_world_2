@@ -40,7 +40,14 @@
 		</script>-->
 		<style type="text/css">
 
-.link, .billing-block {
+.site-desktop-title {
+  -o-animation: fadein 16s linear 1 normal forwards;
+  -moz-animation: fadein 16s linear 1 normal forwards;
+  -webkit-animation: fadein 16s linear 1 normal forwards;
+  animation: fadein 16s linear 1 normal forwards;
+}
+
+.link, .billing-block, .wpml-ls-native {
     -o-animation: fadein 8s linear 1 normal forwards;
     -moz-animation: fadein 8s linear 1 normal forwards;
     -webkit-animation: fadein 8s linear 1 normal forwards;
@@ -110,7 +117,7 @@ var log_object = {"ajax_url":"https:\/\/copenhagencontemporary.org\/wp-admin\/ad
 =======
 				<a href="index.html" rel="home">Copenhagen-Contemporary (C-C)</a>
 				
->>>>>>> ef46bdee7bf283db3d440d76c36677c3bf23a5b8
+>>>>>>> ef46bde18852sjas1233skksc36677c3bf23a5b8
 							</div>
 							<div class="links">
 																		<a class="link Besøg" href="besog/index.html" target="_self">Besøg</a>
@@ -1022,6 +1029,13 @@ var log_object = {"ajax_url":"https:\/\/copenhagencontemporary.org\/wp-admin\/ad
       $("a").on("click", function(e) {
         e.preventDefault();
       });
+
+      // BOTTOM TRICKER
+      $(window).scroll(function(){
+          if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+            $("body > *").addClass("link"); 
+          }
+      });
     });
 
 
@@ -1074,5 +1088,4 @@ $non_real = ["-colored-diagonal-lines-movement-line-pattern-vector-illustration-
 </body>
 
 
-<!-- Mirrored from copenhagencontemporary.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jan 2022 20:56:24 GMT -->
 </html>
